@@ -1,19 +1,7 @@
 import type {Metadata} from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/app/Header";
+import Navbar from "@/app/Navbar";
 import React from "react";
-
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
-});
 
 export const metadata: Metadata = {
     title: "Bruno Lemus - Software Scientist",
@@ -28,10 +16,12 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            className={'antialiased bg-amber-50 text-amber-950 flex flex-row w-screen p-0 m-0'}
         >
-        <Header/>
-        {children}
+        <Navbar/>
+        <div className={'flex flex-col'}>
+            {children}
+        </div>
         </body>
         </html>
     );
