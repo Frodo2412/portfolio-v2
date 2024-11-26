@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 import Navbar from "@/app/Navbar";
 import React from "react";
+import {Analytics} from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
     title: "Bruno Lemus - Software Scientist",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <div className={'flex flex-col'}>
             {children}
         </div>
+        <Analytics/>
         </body>
         </html>
     );
