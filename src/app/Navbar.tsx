@@ -10,7 +10,7 @@ export default function Navbar() {
     return (
         <ul className="flex flex-col items-center justify-center h-screen p-5 fill-amber-950">
             <Link
-                href={'/'}
+                href={'/public'}
                 className="transition-transform transform hover:scale-110 pb-2 pt-2 hover:fill-amber-900">
                 <HomeIcon/>
             </Link>
