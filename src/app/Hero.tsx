@@ -1,9 +1,22 @@
+'use client'
+
+import Typewriter from 'typewriter-effect';
+
 export default function Hero() {
 
     return (
-        <div className="flex flex-col items-start justify-center w-fit border-green-400 border-2 font-cormorant">
-            <h1 className={'text-7xl'}>Hi, I&#39;m Bruno</h1>
-            <h1 className={'text-lg'}>Senate</h1>
+        <div className="w-full h-fit flex flex-col items-start justify-center md:p-20">
+            <h1 className={'text-7xl'}>Hi, I&#39;m <b>Bruno</b></h1>
+            <h2 className={'text-2xl'}>
+                <Typewriter
+                    onInit={(typewriter) => {
+                        typewriter.typeString('And I\'m a Software <em>Engineer</em>')
+                            .pause()
+                            .start();
+                    }}
+                />
+            </h2>
         </div>
     );
+
 }

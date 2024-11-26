@@ -2,7 +2,7 @@ import Hero from "@/app/Hero";
 
 export default function Home() {
     return (
-        <div className="flex-row justify-center-center border-red-900 border-2">
+        <div className={'flex flex-col w-full items-center p-20'}>
             <Hero/>
         </div>
     );
